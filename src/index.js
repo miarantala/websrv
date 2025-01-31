@@ -1,9 +1,13 @@
 import express from 'express';
 import {addItem, deleteItem, editItem, getItemById, getItems} from './items.js';
 import {addUser, getUsers, login} from './users.js';
+import cors from 'cors';
 const hostname = '127.0.0.1';
 const app = express();
 const port = 3000;
+
+// To use with Vite(frontend)
+app.use(cors());
 
 // Static HTML-page in the serever root
 app.use('/', express.static('public'));
