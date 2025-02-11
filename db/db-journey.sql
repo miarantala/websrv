@@ -77,8 +77,8 @@ INSERT INTO Users VALUES (1, 'johndoe', 'temp-pw-1', 'johndoe@example.com', '202
 
 -- Iserting multiple user rows at once (default values like created_at are inserted without need to specify them)
 INSERT INTO Users (username, password, email, user_level) VALUES
-  ('janedoe', 'temp-pw-2', 'janedoe@example.com', 'admin'),
-  ('mike_smith', 'temp-pw-3', 'mike@example.com', 'moderator');
+  ('janedoe', 'temp-pw-2', 'janedoe@example.com', 'regular'),
+  ('mike_smith', 'temp-pw-3', 'mike@example.com', 'regular');
 
 -- Example when FK constraint fails (if user_id 15 does not exist)
 INSERT INTO DiaryEntries (user_id, entry_date, mood, weight, sleep_hours, notes, created_at) VALUES
